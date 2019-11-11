@@ -92,12 +92,31 @@ def process_col(item,opt1, opt2):
 
 Each schools reading and math proficiency scores were evaluated and are presented in the following figure:
 
-[Figure 6](/figures/dist_plot_math_read.png)
+![Figure 6](/figures/dist_plot_math_read.png)
 
 We see that the distribution follows a normal spread for both reading and math, with schools achieving overall better scores on the reading comprehension. However, with these distriubtions in mind, and also that it has been established that the amount of funding has a direct causaul relationship on school performance, a budget reduction approach has to consider these scores. 
 
+10 out of the 431 proposed LAEID and cuts are:
+
+LAEID	Budget Cut
+2502710	1.152360e+07
+2503870	1.019955e+07
+4800254	1.433025e+06
+2506930	9.582450e+06
+3170110	3.184062e+07
+4801438	4.854525e+06
+4817760	3.022353e+07
+3400746	1.140000e+06
+2508910	2.530800e+07
+2500058	2.337000e+06
 
 # Problem 5
+
+The main consideration for cutting funds was the average math and reading competency of each school distict. (Grouped by LAEID.) I created a sorted list of LAEIDS based on the scores in descending order, and applied the following formula todetermine how much funding should be cut.
+
+Amount Cut ($) = .15 * (Average reading and math proficiency) * (Total Fed Budget)
+
+The formula aims to take 15% from the top performing schools. However, this percentage is also weighed based on the average reading and math scores which enforces slightly stronger cuts on the top performing schools. We do not want to penalize top performing schools too much, as this may have a negative impact on future performance.
 
 
 
