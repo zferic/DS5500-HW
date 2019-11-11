@@ -16,8 +16,6 @@ Totalexp = 0.98555*Totalrev + 8.52894e+07
 
 # Problem 3
 '''python
-#preprocess the data
-#takes in an item and range (0 = lower, 1 = upper for values suchas (44-55).. i.e. 0 would chose 44)
 def process_col(item,opt1, opt2):
     
     
