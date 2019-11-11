@@ -14,6 +14,20 @@ P-value:
 Equation: 
 Totalexp = 0.98555*Totalrev + 8.52894e+07
 
+States with the 10 Highest debt ratios per student:
+
+STABBR	debt_ratio
+ND	1.098112
+NC	1.055334
+NE	1.054926
+AK	1.051438
+DC	1.051026
+MN	1.046227
+MT	1.043661
+AL	1.033855
+NY	1.020428
+WA	1.019277
+
 # Problem 3
 
 ```python
