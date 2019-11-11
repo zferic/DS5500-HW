@@ -37,19 +37,20 @@ def process_col(item,opt1, opt2):
     
     #range givem.. can chose upper or lower based on input
     if len(item.split('-')) > 1:
-        
+        #opt1 - takes lower and upper limit and returns midpoint        
         if opt1 == 1:
             lower = int(item.split('-')[0])
             upper = int(item.split('-')[1])
             #this is themidpoint of the interval
             act = (upper - lower)/ 2 + lower
-        
+        #take the lower value in the interval
         elif opt1 == 2:
             act = int(item.split('-')[0])
-        elif opt1 == 3:
+        #take the upper value in the interval
+	elif opt1 == 3:
             act = int(item.split('-')[1])
     
-    #case less than/equal to
+    #case less than/equal to..if opt2 = 2, we do not consider these
     elif 'LE' in item:
         if opt2 == 1:
             act = int(item.replace('LE',''))
@@ -69,7 +70,7 @@ def process_col(item,opt1, opt2):
             act = -85
     elif 'PS' in item:
         #code for act
-        
+        #some error occure din the cleaning
         ## this is a problem
         ## if a lot is missing will be skewed tlower significantly based on missingness 
         act = np.nan
@@ -82,6 +83,9 @@ def process_col(item,opt1, opt2):
             
     return act     
 ```
+
+Please see code comments for detailed cleaning of the exam scores.
+
 ![Figure 4](/figures/math_competancy_by_state.png)
 
 ![Figure 5](/figures/reading_competancy_by_state.png)
@@ -92,12 +96,12 @@ def process_col(item,opt1, opt2):
 
 Each schools reading and math proficiency scores were evaluated and are presented in the following figure:
 
-![Figure 6](/figures/dist_plot_math_read.png)
+![Figure 6](/figures/dist_plot_math_read2.png)
 
 We see that the spread follows a normal distribution for both reading and math, with schools achieving overall better scores in the reading proficiency. Keeping these distributions in mind, and also that it has been established that the amount of funding has a direct causal relationship on school performance, an optimal budget reduction approach should consider these scores.
 
 10 out of the 431 proposed LAEID and cuts are:
-
+```
 LAEID	Budget Cut
 2502710	1.152360e+07
 2503870	1.019955e+07
@@ -109,7 +113,7 @@ LAEID	Budget Cut
 3400746	1.140000e+06
 2508910	2.530800e+07
 2500058	2.337000e+06
-
+```
 # Problem 5
 
 The main consideration for cutting funds was the average math and reading competency of each school district. (Grouped by LAEID.) I created a sorted list of LAEIDS based on the scores in descending order and applied the following formula to determine how much funding should be cut.
