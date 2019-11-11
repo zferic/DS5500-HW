@@ -94,7 +94,7 @@ Each schools reading and math proficiency scores were evaluated and are presente
 
 ![Figure 6](/figures/dist_plot_math_read.png)
 
-We see that the distribution follows a normal spread for both reading and math, with schools achieving overall better scores on the reading comprehension. However, with these distriubtions in mind, and also that it has been established that the amount of funding has a direct causaul relationship on school performance, a budget reduction approach has to consider these scores. 
+We see that the spread follows a normal distribution for both reading and math, with schools achieving overall better scores in the reading proficiency. Keeping these distributions in mind, and also that it has been established that the amount of funding has a direct causal relationship on school performance, an optimal budget reduction approach should consider these scores.
 
 10 out of the 431 proposed LAEID and cuts are:
 
@@ -112,11 +112,13 @@ LAEID	Budget Cut
 
 # Problem 5
 
-The main consideration for cutting funds was the average math and reading competency of each school distict. (Grouped by LAEID.) I created a sorted list of LAEIDS based on the scores in descending order, and applied the following formula todetermine how much funding should be cut.
+The main consideration for cutting funds was the average math and reading competency of each school district. (Grouped by LAEID.) I created a sorted list of LAEIDS based on the scores in descending order and applied the following formula to determine how much funding should be cut.
 
 Amount Cut ($) = .15 * (Average reading and math proficiency) * (Total Fed Budget)
 
-The formula aims to take 15% from the top performing schools. However, this percentage is also weighed based on the average reading and math scores which enforces slightly stronger cuts on the top performing schools. We do not want to penalize top performing schools too much, as this may have a negative impact on future performance.
+The formula aims to take 15% from the top performing schools. However, this percentage is also weighed based on the average reading and math scores which enforces slightly stronger cuts on the top performing schools. We do not want to penalize top performing schools equally, as this may have a negative impact. 
+
+
 
 
 
