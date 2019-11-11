@@ -120,8 +120,7 @@ The main consideration for cutting funds was the average math and reading compet
 
 Amount Cut ($) = .15 * (Average reading and math proficiency) * (Total Fed Budget)
 
-The formula aims to take 15% from the top performing schools. However, this percentage is also weighed based on the average reading and math scores which enforces slightly stronger cuts on the top performing schools. We do not want to penalize top performing schools equally, as this may have a negative impact. 
-
+The formula aims to take 15% from the top performing schools. However, this percentage is also weighed based on the average reading and math scores which enforces slightly stronger cuts on the top performing schools. We do not want to penalize top performing schools equally, as this may have a negative impact. The procedure terminates once the target of 15% of the total federal budget is reached.
 
 
 
