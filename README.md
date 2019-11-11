@@ -15,7 +15,60 @@ Equation:
 Totalexp = 0.98555*Totalrev + 8.52894e+07
 
 # Problem 3
+'''python
+#preprocess the data
+#takes in an item and range (0 = lower, 1 = upper for values suchas (44-55).. i.e. 0 would chose 44)
+def process_col(item,opt1, opt2):
+    
+    
+    #range givem.. can chose upper or lower based on input
+    if len(item.split('-')) > 1:
+        
+        if opt1 == 1:
+            lower = int(item.split('-')[0])
+            upper = int(item.split('-')[1])
+            #this is themidpoint of the interval
+            act = (upper - lower)/ 2 + lower
+        
+        elif opt1 == 2:
+            act = int(item.split('-')[0])
+        elif opt1 == 3:
+            act = int(item.split('-')[1])
+    
+    #case less than/equal to
+    elif 'LE' in item:
+        if opt2 == 1:
+            act = int(item.replace('LE',''))
+        if opt2 == 2:
+            act = -85
+    #case greater than
+    elif 'GE' in item:
+        if opt2 == 1:
+            act = int(item.replace('GE',''))
+        if opt2 == 2:
+            act = -85
+    #case less than
+    elif 'LT' in item:
+        if opt2 == 1:
+            act = int(item.replace('LT',''))
+        if opt2 == 2:
+            act = -85
+    elif 'PS' in item:
+        #code for act
+        
+        ## this is a problem
+        ## if a lot is missing will be skewed tlower significantly based on missingness 
+        act = np.nan
+    else:
+        try:
+            act = int(item)
+        except: 
+            #error code.. something went wrong
+            act = -6
+            
+    return act     
 
+'''
 ![Figure 4](/figures/math_competancy_by_state.png)
 
 ![Figure 5](/figures/reading_competancy_by_state.png)
