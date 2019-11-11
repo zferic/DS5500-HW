@@ -90,7 +90,12 @@ def process_col(item,opt1, opt2):
 
 15% of the the U.S. federal budget currently being spent (2015-2016) is $8340411300.0.
 
-Each school district will have their funding cut proportional to the % of the total federal budget. That is, it is unfair to equally cut budgets for all districts as some disproportionatlely take in more money. Based on this % of the total budget, they will contribute to the 15% of the cuts being made. 
+Each schools reading and math proficiency scores were evaluated and are presented in the following figure:
+
+[Figure 6](/figures/dist_plot_math_read.png)
+
+We see that the distribution follows a normal spread for both reading and math, with schools achieving overall better scores on the reading comprehension. However, with these distriubtions in mind, and also that it has been established that the amount of funding has a direct causaul relationship on school performance, a budget reduction approach has to consider these scores. 
+
 
 # Problem 5
 
