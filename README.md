@@ -15,7 +15,9 @@ Equation:
 Totalexp = 0.98555*Totalrev + 8.52894e+07
 
 # Problem 3
-'''python
+
+```python
+
 def process_col(item,opt1, opt2):
     
     
@@ -65,8 +67,7 @@ def process_col(item,opt1, opt2):
             act = -6
             
     return act     
-
-'''
+```
 ![Figure 4](/figures/math_competancy_by_state.png)
 
 ![Figure 5](/figures/reading_competancy_by_state.png)
